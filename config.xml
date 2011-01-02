@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets">
+	<name>Flashback</name>
+	<description>Avoids the "Du lämnar nu Flashback Forum" page for external links at https://www.flashback.org/.</description>
+	<author href="http://my.opera.com/Cygnus/about/">Cygnus</author>
+	<icon src="flashback.png"/>
+</widget>
