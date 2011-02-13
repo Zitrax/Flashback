@@ -5,8 +5,12 @@
 // @include https://*.flashback.org/*
 // ==/UserScript==
 
-if (document.location.pathname == '/leave.php') {
-   var url = unescape(document.location.search.substring(3));
-   if (!url.indexOf('://')) url = 'http://' + url;
-   window.location = url;
-}
+window.addEventListener('DOMContentLoaded', function() {
+	var links = document.getElementsByTagName('a');
+	var leave_page = "flashback.org/leave.php?u=";
+    for (var i = 0; i<links.length; i++) {
+		var pos = links[i].href.indexOf(leave_page);
+		if( pos > -1 )
+	 		links[i].href = unescape(links[i].href.substring(pos+leave_page.length));    
+	}
+}, false);
