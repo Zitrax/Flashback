@@ -11,6 +11,6 @@ window.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i<links.length; i++) {
 		var pos = links[i].href.indexOf(leave_page);
 		if( pos > -1 )
-	 		links[i].href = unescape(links[i].href.substring(pos+leave_page.length));    
+			links[i].href = unescape(links[i].href.substring(pos+leave_page.length)).replace(/&amp;/gi, "&");    
 	}
 }, false);
